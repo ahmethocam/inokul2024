@@ -19,7 +19,7 @@
     </a>
 
 @endsection
-
+//Kurum Admin Kaydı Yapılacak
 @section("contents")
 
     <table class="table table-bordered table-striped">
