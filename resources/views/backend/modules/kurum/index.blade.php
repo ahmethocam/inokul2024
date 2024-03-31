@@ -11,7 +11,7 @@
 
 @section("cardtitle")
     Kurumlar
-@endsectiongit
+@endsection
 
 @section("cardtools")
     <a href="{{route("kurum.create")}}" class="btn btn-sm btn-success">
