@@ -40,6 +40,22 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
+        'veli' => [
+            'driver' => 'session',
+            'provider' => 'veliler',
+        ],
+        'ogrenci' => [
+            'driver' => 'session',
+            'provider' => 'ogrenciler',
+        ],
+        'ogretmen' => [
+            'driver' => 'session',
+            'provider' => 'ogretmenler',
+        ],
+        'personel' => [
+            'driver' => 'session',
+            'provider' => 'personeller',
+        ],
 
     ],
 
@@ -65,7 +81,22 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
-
+        'veliler' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Veli::class),
+        ],
+        'ogrenciler' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Ogrenci::class),
+        ],
+        'ogretmenler' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Ogretmen::class),
+        ],
+        'personeller' => [
+            'driver' => 'eloquent',
+            'model' => env('AUTH_MODEL', App\Models\Personel::class),
+        ],
 
         // 'users' => [
         //     'driver' => 'database',
@@ -95,6 +126,30 @@ return [
     'passwords' => [
         'users' => [
             'provider' => 'users',
+            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'veliler' => [
+            'provider' => 'veliler',
+            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'ogrenciler' => [
+            'provider' => 'ogrenciler',
+            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'ogretmenler' => [
+            'provider' => 'ogretmenler',
+            'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
+            'expire' => 60,
+            'throttle' => 60,
+        ],
+        'personeller' => [
+            'provider' => 'personeller',
             'table' => env('AUTH_PASSWORD_RESET_TOKEN_TABLE', 'password_reset_tokens'),
             'expire' => 60,
             'throttle' => 60,
